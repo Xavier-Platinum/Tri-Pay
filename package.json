@@ -17,6 +17,11 @@
     "PayU",
     "ES6"
   ],
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.5.4",
+    "vscode": "1.66.0"
+  },
   "author": "Kwis Lawrence Francis",
   "license": "ISC",
   "dependencies": {
