@@ -1,0 +1,16 @@
+{
+  "message": "Saved",
+  "response": {
+    "name": "test",
+    "email": "test@test.com",
+    "amount": 5000,
+    "reference": "5a727d9c-d6e7-5d12-ae33-7ab20b71bc37",
+    "status": "pending",
+    "payment_gateway": "flutter-wave",
+    "_id": "624bc562c35e71781a76f197",
+    "createdAt": "2022-04-05T04:28:18.409Z",
+    "updatedAt": "2022-04-05T04:28:18.409Z",
+    "__v": 0
+  },
+  "redirect_link": "https://ravemodal-dev.herokuapp.com/v3/hosted/pay/f04d5f07d23729ea0203"
+}

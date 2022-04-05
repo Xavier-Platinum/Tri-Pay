@@ -1,0 +1,15 @@
+{
+  "message": "Saved",
+  "response": {
+    "amount": 6000,
+    "reference": "a8d57576",
+    "status": "pending",
+    "payment_gateway": "paystack",
+    "access_code": "usw8l6wgit1pheo",
+    "_id": "624bc917b4982a808cbd593e",
+    "createdAt": "2022-04-05T04:44:07.499Z",
+    "updatedAt": "2022-04-05T04:44:07.499Z",
+    "__v": 0
+  },
+  "redirect_link": "https://checkout.paystack.com/usw8l6wgit1pheo"
+}
