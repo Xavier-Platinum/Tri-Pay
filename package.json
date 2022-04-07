@@ -4,7 +4,7 @@
   "description": "Tripple Payment system",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon app/main.js --exec babel-node",
+    "dev": "node app/main.js --exec babel-node",
     "build": "babel app --out-dir dist",
     "start": "npm run build && node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
