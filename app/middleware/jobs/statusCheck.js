@@ -1,10 +1,10 @@
 import axios from "axios";
-import Status from "../../models/Init/Status";
+import Status from "../../models/Init/Status.js";
 
-const paystack_availability = async() => {
+export const paystack_availability = async() => {
     await axios({
         method: "GET",
-        url: "https://api.paystack.co/transaction/initialize",
+        url: "https://api.paystack.co/transaction",
         headers: {
             Authorization: `Bearer sk_test_4a57d0b227e96cd5e84aa5e8d7a454971e1439c3`
         }
@@ -12,10 +12,11 @@ const paystack_availability = async() => {
     .then(async(res) => {
         await Status.findOne({name: "paystack"})
         .then((data) => {
+            console.log(data)
             if(!data) {
                 Status.create({
                     name: "paystack",
-                    status_code: res.data.status
+                    status_code: res.status
                 })
                 console.log("Paystack status Created")
             } else {
@@ -28,11 +29,11 @@ const paystack_availability = async() => {
         })
         .catch(err => console.log(err));
     })
-    .catch(err = console.log(err))
+    .catch(err => console.log(err))
     // console.log(res);
 }
 
-const flutterwave_availability = async() => {
+export const flutterwave_availability = async() => {
     await axios({
         method: "GET",
         url: "https://api.flutterwave.com/v3/payments",
@@ -46,7 +47,7 @@ const flutterwave_availability = async() => {
             if(!data) {
                 Status.create({
                     name: "flutterwave",
-                    status_code: res.data.status
+                    status_code: res.status
                 })
                 console.log(("Flutterwave Status Created"))
             } else {
@@ -59,5 +60,5 @@ const flutterwave_availability = async() => {
         })
         .catch(err => console.log(err));
     })
-    .catch(err = console.log(err))
+    .catch(err => console.log(err))
 }
