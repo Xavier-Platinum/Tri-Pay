@@ -4,9 +4,11 @@
   "description": "Tripple Payment system",
   "main": "main.js",
   "scripts": {
-    "dev": "node app/main.js --exec babel-node",
-    "build": "babel app --out-dir dist",
-    "start": "npm run build && node dist/main.js",
+    "dev": "nodemon app/main.js --exec babel-node",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel app --out-dir dist",
+    "serve": "node dist/main.js",
+    "start": "npm run build && npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -27,6 +29,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "axios": "^0.26.1",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "^1.20.0",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
@@ -37,10 +40,12 @@
     "flutterwave-node-v3": "^1.0.9",
     "got": "^12.0.3",
     "helmet": "^5.0.2",
+    "jest": "^27.5.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.9",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.0",
+    "open": "^8.4.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.17.0"
@@ -51,5 +56,6 @@
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "nodemon": "^2.0.15"
-  }
+  },
+  "type": "module"
 }
