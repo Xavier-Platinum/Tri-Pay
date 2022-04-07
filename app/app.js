@@ -1,13 +1,14 @@
 import express from 'express';
-import { cors } from './middleware/cors';
+import { cors } from './middleware/cors.js';
 import morgan from 'morgan';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
-const MongoStore = require("connect-mongo");
+import MongoStore from "connect-mongo";
+import  "./middleware/jobs/job.js";
 
 //Importing Routes
-import PaymentRoute from "./routes/index";
+import PaymentRoute from "./routes/index.js";
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.use(
         }),
     }),
 );
+// cronJob()
 // check_availability();
 //routes
 app.use("/api/payment", PaymentRoute)

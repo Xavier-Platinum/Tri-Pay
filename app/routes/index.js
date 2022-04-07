@@ -1,9 +1,9 @@
 import express from "express";
 const router =  express.Router();
-import {create_payment} from "../controllers";
-import FlutterwaveRoutes from "./Payments/flutterwave";
-import PaystackRoutes from "./Payments/Paystack";
-import Status from "../models/Init/Status";
+import {create_payment} from "../controllers/index.js";
+import FlutterwaveRoutes from "./Payments/flutterwave.js";
+import PaystackRoutes from "./Payments/Paystack.js";
+import Status from "../models/Init/Status.js";
 const rs = Status.find({});
 
 router.get("/", async(req, res) => {

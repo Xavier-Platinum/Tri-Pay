@@ -1,8 +1,8 @@
-import Transaction from "../../models/Payments/Payment.model";
-import {createPayment} from "../../utils/helpers/flutterwave";
-import {initializePayment, verifyPayment} from "../../utils/helpers/paystack";
+import Transaction from "../../models/Payments/Payment.model.js";
+import {createPayment} from "../../utils/helpers/flutterwave.js";
+import {initializePayment, verifyPayment} from "../../utils/helpers/paystack.js";
 import crypto from "crypto";
-import Status from "../../models/Init/Status";
+import Status from "../../models/Init/Status.js";
 
 
 export const create_payment = async(req, res, next) => {

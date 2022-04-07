@@ -1,6 +1,6 @@
 import axios from "axios";
 
-exports.initializePayment = async (form) => {
+export const initializePayment = async (form) => {
     const options = {
         url: "https://api.paystack.co/transaction/initialize",
         headers: {
@@ -21,7 +21,7 @@ exports.initializePayment = async (form) => {
     });
 };
 
-exports.verifyPayment = async (ref) => {
+export const verifyPayment = async (ref) => {
     const options = {
         url: "https://api.paystack.co/transaction/verify/" + encodeURIComponent(ref),
         headers: {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-exports.createPayment = async(form) => {
+export const createPayment = async(form) => {
     const options = {
         url: "https://api.flutterwave.com/v3/payments",
         headers: {
