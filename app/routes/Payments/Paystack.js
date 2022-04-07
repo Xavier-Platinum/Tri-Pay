@@ -1,10 +1,9 @@
 import express from "express";
 const router = express.Router();
-import {paystack_create_payment, paystack_verify_payment} from "../../controllers/payment/payment.controller";
+import {paystack_verify_payment} from "../../controllers";
 
 // Initializing payment
-router.post("/paystack/create", paystack_create_payment);
 
-router.get("/paystack/verify", paystack_verify_payment);
+router.get("/verify", paystack_verify_payment);
 
 export default router;
