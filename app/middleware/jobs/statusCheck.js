@@ -12,7 +12,6 @@ export const paystack_availability = async() => {
     .then(async(res) => {
         await Status.findOne({name: "paystack"})
         .then((data) => {
-            console.log(data)
             if(!data) {
                 Status.create({
                     name: "paystack",

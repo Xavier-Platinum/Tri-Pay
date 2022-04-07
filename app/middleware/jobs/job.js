@@ -6,4 +6,4 @@ cron.schedule("5 * * * * *", () => {
     paystack_availability()
     flutterwave_availability()
     console.log("============ Done Checking =================")
-})
+}, 5000)
