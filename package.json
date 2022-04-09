@@ -4,7 +4,7 @@
   "description": "Tripple Payment system",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon app/main.js --exec babel-node",
+    "dev": "node app/main.js --exec babel-node",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel app --out-dir dist",
     "serve": "node dist/main.js",
