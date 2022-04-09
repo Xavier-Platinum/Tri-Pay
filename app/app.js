@@ -48,6 +48,9 @@ app.use(
 // cronJob()
 // check_availability();
 //routes
+app.get("/", (req, res) => {
+    res.json({msg: "API's are responding well"})
+})
 app.use("/api/payment", PaymentRoute)
 
 export default app;
